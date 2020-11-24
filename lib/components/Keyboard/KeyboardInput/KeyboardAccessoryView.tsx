@@ -241,6 +241,12 @@ class KeyboardAccessoryView extends Component<KeyboardAccessoryViewProps> {
     }
   }
 
+  resetTracking() {
+    if (this.trackingViewRef) {
+      this.trackingViewRef.resetTracking();
+    }
+  }
+
   render() {
     const {
       revealKeyboardInteractive,
