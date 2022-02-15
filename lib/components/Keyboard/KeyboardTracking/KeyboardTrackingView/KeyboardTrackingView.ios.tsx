@@ -42,6 +42,12 @@ class KeyboardTrackingView extends PureComponent<KeyboardTrackingViewProps> {
       KeyboardTrackingViewTempManager.scrollToStart(ReactNative.findNodeHandle(this.ref));
     }
   }
+
+  resetTracking() {
+    if (this.ref && KeyboardTrackingViewTempManager && KeyboardTrackingViewTempManager.resetTracking) {
+      KeyboardTrackingViewTempManager.resetTracking(ReactNative.findNodeHandle(this.ref));
+    }
+  }
 }
 
 export default KeyboardTrackingView;

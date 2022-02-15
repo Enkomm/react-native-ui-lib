@@ -132,6 +132,7 @@ class KeyboardAccessoryView extends Component<KeyboardAccessoryViewProps> {
     manageScrollView: true,
     requiresSameParentToManageScrollView: false,
     addBottomView: false,
+    bottomViewColor: '#ffffff',
     allowHitsOutsideBounds: false
   };
 
@@ -240,12 +241,19 @@ class KeyboardAccessoryView extends Component<KeyboardAccessoryViewProps> {
     }
   }
 
+  resetTracking() {
+    if (this.trackingViewRef) {
+      this.trackingViewRef.resetTracking();
+    }
+  }
+
   render() {
     const {
       revealKeyboardInteractive,
       manageScrollView,
       requiresSameParentToManageScrollView,
       addBottomView,
+      bottomViewColor,
       allowHitsOutsideBounds,
       renderContent,
       kbInputRef,
@@ -266,6 +274,7 @@ class KeyboardAccessoryView extends Component<KeyboardAccessoryViewProps> {
         manageScrollView={manageScrollView}
         requiresSameParentToManageScrollView={requiresSameParentToManageScrollView}
         addBottomView={addBottomView}
+        bottomViewColor={bottomViewColor}
         allowHitsOutsideBounds={allowHitsOutsideBounds}
       >
         <>
